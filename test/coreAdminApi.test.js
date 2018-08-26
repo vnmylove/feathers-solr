@@ -15,7 +15,6 @@ describe('Core Admin Api', () => {
       .status()
         .then(function(res){
           response = res;
-          // console.log(res);
           expect(res.responseHeader.status).to.be.equal(0);
           // expect(res.status).to.be.equal('OK');
           done();
@@ -28,7 +27,8 @@ describe('Core Admin Api', () => {
 
 
     it('core name should be gettingstarted', done => {
-        expect(response.status.gettingstarted.name).be.equal('gettingstarted');
+        expect(response.status.gettingstarted_shard1_replica_n1.name).be.equal('gettingstarted_shard1_replica_n1');
+        // expect(response.status.gettingstarted.name).be.equal('gettingstarted');
         done();
     });
 
