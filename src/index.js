@@ -28,6 +28,8 @@ class Service {
     this.Solr = new Solr({
       host: this.options.host,
       core: this.options.core,
+      username: this.options.username,
+      password: this.options.password,
       managedScheme: this.options.managedScheme,
       commitStrategy: this.options.commitStrategy
     });

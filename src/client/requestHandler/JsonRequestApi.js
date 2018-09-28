@@ -37,7 +37,10 @@ export default (request, opts, query) => {
         body:  Object.assign({
             query: '*:*',
         }, query),
-        json: true
+        json: true,
+        headers : {
+            "Authorization" : "Basic " + new Buffer( opts.username + ":" + opts.password).toString("base64")
+        }
     };
     // console.log('JSON API OPTIONS',options);
     // console.log('JSON API query',options.body);
